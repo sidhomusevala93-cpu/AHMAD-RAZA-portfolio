@@ -1,0 +1,5 @@
+{
+  "name": "Interactive Personal Portfolio",
+  "description": "A complete, single-page portfolio website showcasing skills, projects, experience, and more. Built with React and Tailwind CSS, featuring interactive elements, animations, dark mode, and various functionalities like PDF/CSV generation.",
+  "requestFramePermissions": []
+}

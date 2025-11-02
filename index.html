@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO & Open Graph Tags -->
+    <!-- Replace with your actual data -->
+    <title>Jane Doe - Senior Frontend Engineer</title>
+    <meta name="description" content="Personal portfolio of Jane Doe, a senior frontend engineer specializing in React, TypeScript, and modern web technologies.">
+    <meta name="keywords" content="React Developer, Frontend Engineer, Portfolio, TypeScript, Web Development">
+    <meta name="author" content="Jane Doe">
+    
+    <meta property="og:title" content="Jane Doe - Senior Frontend Engineer" />
+    <meta property="og:description" content="Explore my projects, skills, and experience in web development." />
+    <meta property="og:image" content="https://picsum.photos/1200/630" /> <!-- Replace with a link to your preview image -->
+    <meta property="og:url" content="https://your-domain.com" /> <!-- Replace with your domain -->
+    <meta property="og:type" content="website" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        // Inline script to set the theme before React loads to prevent FOUC (Flash of Unstyled Content)
+        (function() {
+            try {
+                const theme = localStorage.getItem('portfolio-theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+
+    <!-- 
+    // Service Worker Registration (optional, uncomment to use)
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('SW registered: ', registration);
+          }).catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+        });
+      }
+    </script>
+    -->
+</body>
+</html>
